@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilhem Respaut | Photographe</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <h1>Guilhem Respaut</h1>
+                <p>Photographe</p>
+            </a>
+            <a href="https://www.instagram.com/grespaut/" class="instagram">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </nav>
+        
+        <main>
+            <article class="article" data-status="active" data-index="0">
+                <div class="media">
+                    <img class="btn-description" src="media/photos/Laylow-Def.jpg" alt="Laylow sur scène devant la foule" onclick="toggleMobileDescription()">
+                </div>
+                <div class="sidebar">
+                    <div class="description">
+                        <h2>Laylow aux Déferlantes, Juillet 2022</h2>
+                        <p>
+                            <a href="https://www.instagram.com/jey.laylow/" target="_blank">@jey.laylow</a> at 
+                            <a href="https://www.instagram.com/lesdeferlantessuddefrance/" target="_blank">@lesdeferlantessuddefrance</a>, Juillet 2022.
+                        </p>
+                        <a href="https://www.instagram.com/p/CgcMuKdIN6i/" target="_blank" class="btn">
+                            <i class="bi bi-plus-lg btn"></i>
+                        </a>
+                        <button class="btn-echap" onclick="toggleMobileDescription()">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <div class="fleches">
+                        <i class="bi bi-arrow-left precedent" onclick="precOnClick()"></i>
+                        <i class="bi bi-arrow-right suivant" onclick="suivOnClick()"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article" data-status="inactive" data-index="1">
+                <div class="media">
+                    <img class="btn-description" src="media/photos/Paysage-montagne.jpg" alt="Paysage d'une chaîne de montagne" onclick="toggleMobileDescription()">
+                </div>
+                <div class="sidebar">
+                    <div class="description">
+                        <h2>Titre, Date</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, reiciendis aliquid? Fuga sit pariatur cumque repellat, adipisci natus reprehenderit facere voluptatum maxime quisquam minus ea fugit ipsam iure magnam laudantium.</p>
+                        <button class="btn-echap" onclick="toggleMobileDescription()">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <div class="fleches">
+                        <i class="bi bi-arrow-left precedent" onclick="precOnClick()"></i>
+                        <i class="bi bi-arrow-right suivant" onclick="suivOnClick()"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article" data-status="inactive" data-index="2">
+                <div class="media">
+                    <img class="btn-description" src="media/photos/Feronnier.jpg" alt="Feronnier découpant du métal à la disqueuse" onclick="toggleMobileDescription()">
+                </div>
+                <div class="sidebar">
+                    <div class="description">
+                        <h2>Denis Rabasa Ferronnier à Latour-de-France, 15 Juin 2022</h2>
+                        <p>Situé dans un petit village des Pyrénées-Orientales, Denis Rabasa perpétue le métier de Ferronnier depuis deux générations à Latour-de-France. Cela fait aujourd'hui 17 ans qu'il a repris la ferronnerie de son père installé depuis 1969 en tant que maréchal-ferrant.
+                            <a href="https://www.instagram.com/denisrabasa/" target="_blank">@denisrabasa</a>
+                        </p>
+                        <a href="https://www.instagram.com/p/Ce1QTDbopTv/" target="_blank" class="btn">
+                            <i class="bi bi-plus-lg btn"></i>
+                        </a>
+                        <button class="btn-echap" onclick="toggleMobileDescription()">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <div class="fleches">
+                        <i class="bi bi-arrow-left precedent" onclick="precOnClick()"></i>
+                        <i class="bi bi-arrow-right suivant" onclick="suivOnClick()"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article" data-status="inactive" data-index="3">
+                <div class="media">
+                    <img class="btn-description" src="media/photos/DJ.jpg" alt="DJ qui mixe devant son set" onclick="toggleMobileDescription()">
+                    <i class="bi bi-plus-lg btn-description"></i>
+                </div>
+                <div class="sidebar">
+                    <div class="description">
+                        <h2>Titre, Date</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, reiciendis aliquid? Fuga sit pariatur cumque repellat, adipisci natus reprehenderit facere voluptatum maxime quisquam minus ea fugit ipsam iure magnam laudantium.</p>
+                        <button class="btn-echap" onclick="toggleMobileDescription()">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <div class="fleches">
+                        <i class="bi bi-arrow-left precedent" onclick="precOnClick()"></i>
+                        <i class="bi bi-arrow-right suivant" onclick="suivOnClick()"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article" data-status="inactive" data-index="4">
+                <div class="media">
+                    <img class="btn-description" src="media/photos/Chanteuse.jpg" alt="Chanteuse du groupe Whyno sur scène" onclick="toggleMobileDescription()">
+                    <i class="bi bi-plus-lg btn-description"></i>
+                </div>
+                <div class="sidebar">
+                    <div class="description">
+                        <h2>Whyno, 12 Octobre 2022</h2>
+                        <p>
+                            <a href="https://www.instagram.com/whynoband/" target="_blank">@whynoband</a>
+                        </p>
+                        <a href="https://www.instagram.com/p/CkBhwXKLOjO/" target="_blank" class="btn">
+                            <i class="bi bi-plus-lg btn"></i>
+                        </a>
+                        <button class="btn-echap" onclick="toggleMobileDescription()">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <div class="fleches">
+                        <i class="bi bi-arrow-left precedent" onclick="precOnClick()"></i>
+                        <i class="bi bi-arrow-right suivant" onclick="suivOnClick()"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article" data-status="inactive" data-index="5">
+                <div class="media">
+                    <img class="btn-description" src="media/photos/Groupe-music.jpg" alt="Groupe Whyno tenant des instruments" onclick="toggleMobileDescription()">
+                    <i class="bi bi-plus-lg btn-description"></i>
+                </div>
+                <div class="sidebar">
+                    <div class="description">
+                        <h2>Whyno, 12 Octobre 2022</h2>
+                        <p>
+                            <a href="https://www.instagram.com/whynoband/" target="_blank">@whynoband</a>
+                        </p>
+                        <a href="https://www.instagram.com/p/CkBhwXKLOjO/" target="_blank" class="btn">
+                            <i class="bi bi-plus-lg btn"></i>
+                        </a>
+                        <button class="btn-echap" onclick="toggleMobileDescription()">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <div class="fleches">
+                        <i class="bi bi-arrow-left precedent" onclick="precOnClick()"></i>
+                        <i class="bi bi-arrow-right suivant" onclick="suivOnClick()"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article" data-status="inactive" data-index="6">
+                <div class="media">
+                    <img class="btn-description" src="media/photos/Guitariste.jpg" alt="Guitariste du groupe Whyno sur scène" onclick="toggleMobileDescription()">
+                    <i class="bi bi-plus-lg btn-description"></i>
+                </div>
+                <div class="sidebar">
+                    <div class="description">
+                        <h2>Whyno, 12 Octobre 2022</h2>
+                        <p>
+                            <a href="https://www.instagram.com/whynoband/" target="_blank">@whynoband</a>
+                        </p>
+                        <a href="https://www.instagram.com/p/CkBhwXKLOjO/" target="_blank" class="btn">
+                            <i class="bi bi-plus-lg btn"></i>
+                        </a>
+                        <button class="btn-echap" onclick="toggleMobileDescription()">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <div class="fleches">
+                        <i class="bi bi-arrow-left precedent" onclick="precOnClick()"></i>
+                        <i class="bi bi-arrow-right suivant" onclick="suivOnClick()"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article" data-status="inactive" data-index="7">
+                <div class="media">
+                    <img class="btn-description" src="media/photos/Parcelle-viticole.jpg" alt="Lac de Caramany durant Mai" onclick="toggleMobileDescription()">
+                    <i class="bi bi-plus-lg btn-description"></i>
+                </div>
+                <div class="sidebar">
+                    <div class="description">
+                        <h2>Lac de Caramany, Mai 2022</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, reiciendis aliquid? Fuga sit pariatur cumque repellat, adipisci natus reprehenderit facere voluptatum maxime quisquam minus ea fugit ipsam iure magnam laudantium.</p>
+                        <a href="https://www.instagram.com/p/CeeOgD7Lmrf/" target="_blank" class="btn">
+                            <i class="bi bi-plus-lg btn"></i>
+                        </a>
+                        <button class="btn-echap" onclick="toggleMobileDescription()">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <div class="fleches">
+                        <i class="bi bi-arrow-left precedent" onclick="precOnClick()"></i>
+                        <i class="bi bi-arrow-right suivant" onclick="suivOnClick()"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article" data-status="inactive" data-index="8">
+                <div class="media">
+                    <img class="btn-description" src="media/photos/Pelle.jpg" alt="Personne qui travaille la terre avec sa pelle" onclick="toggleMobileDescription()">
+                    <i class="bi bi-plus-lg btn-description"></i>
+                </div>
+                <div class="sidebar">
+                    <div class="description">
+                        <h2>Titre, Date</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, reiciendis aliquid? Fuga sit pariatur cumque repellat, adipisci natus reprehenderit facere voluptatum maxime quisquam minus ea fugit ipsam iure magnam laudantium.</p>
+                        <button class="btn-echap" onclick="toggleMobileDescription()">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <div class="fleches">
+                        <i class="bi bi-arrow-left precedent" onclick="precOnClick()"></i>
+                        <i class="bi bi-arrow-right suivant" onclick="suivOnClick()"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article" data-status="inactive" data-index="9">
+                <div class="media">
+                    <img class="btn-description" src="media/photos/Randonneurs.jpg" alt="Deux randonneurs en contre-jour du coucher de soleil" onclick="toggleMobileDescription()">
+                    <i class="bi bi-plus-lg btn-description"></i>
+                </div>
+                <div class="sidebar">
+                    <div class="description">
+                        <h2>Marche au coucher de soleil jusqu'au lac blanc, Val Thorens Juillet 2021</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, reiciendis aliquid? Fuga sit pariatur cumque repellat, adipisci natus reprehenderit facere voluptatum maxime quisquam minus ea fugit ipsam iure magnam laudantium.</p>
+                        <a href="https://www.instagram.com/p/CSuLwrJIMcR/" target="_blank" class="btn">
+                            <i class="bi bi-plus-lg btn"></i>
+                        </a>
+                        <button class="btn-echap" onclick="toggleMobileDescription()">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <div class="fleches">
+                        <i class="bi bi-arrow-left precedent" onclick="precOnClick()"></i>
+                        <i class="bi bi-arrow-right suivant" onclick="suivOnClick()"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article" data-status="becoming-active-from-before" data-index="10">
+                <div class="media">
+                    <video controls>
+                        <source src="/media/videos/Laylow Def 2022.mp4">
+                    </video>
+                    <button class="btn-description" onclick="toggleMobileDescription()">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </div>
+                <div class="sidebar">
+                    <div class="description">
+                        <h2>Laylow aux Déferlantes, Juillet 2022</h2>
+                        <p>
+                            <a href="https://www.instagram.com/jey.laylow/" target="_blank">@jey.laylow</a> at <a href="https://www.instagram.com/lesdeferlantessuddefrance/" target="_blank">@lesdeferlantessuddefrance</a>, Juillet 2022
+                        </p>
+                        <a href="https://www.instagram.com/p/CgcMuKdIN6i/" target="_blank" class="btn">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+                        <button class="btn-echap" onclick="toggleMobileDescription()">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <div class="fleches">
+                        <i class="bi bi-arrow-left precedent" onclick="precOnClick()"></i>
+                        <i class="bi bi-arrow-right suivant" onclick="suivOnClick()"></i>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+    
+    
+    <script src="app.js" defer></script>
+</body>
+</html>
