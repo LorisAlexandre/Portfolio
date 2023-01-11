@@ -96,6 +96,9 @@ article{
     left: 50%;
     transform: translateX(-50%);
 }
+.description .btn-echap{
+    opacity: 0;
+}
 .fleches{
     width: 100%;
     border-top: 1px solid;
@@ -187,6 +190,7 @@ article[data-index="5"] .media img{
         transform: rotate(45deg);
         font-size: 1.5em;
         background: none;
+        opacity: 1;
     }
 
     article[data-index="10"] .media button.btn-description{
