@@ -18,7 +18,6 @@ button{
     display: flex;
     flex-direction: column;
 }
-
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -190,7 +189,7 @@ article[data-index="5"] .media img{
         transform: rotate(45deg);
         font-size: 1.5em;
         background: none;
-        opacity: 1;
+        opacity: 1 !important;
     }
 
     article[data-index="10"] .media button.btn-description{
