@@ -96,7 +96,7 @@ article {
 }
 .description .btn-insta {
   position: absolute;
-  bottom: 0.5em;
+  bottom: 0.95em;
   left: 50%;
   transform: translateX(-50%);
 }
