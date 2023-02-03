@@ -165,7 +165,6 @@ body {
     width: max-content;
     align-items: baseline;
     justify-content: center;
-    margin-inline: auto;
 }
 .herobanner .carte {
     display: flex;
@@ -192,6 +191,7 @@ body {
 @media (max-width: 550px) {
     .herobanner .main-btn {
         flex-direction: column;
+        margin-inline: auto;
     }
 }
 
