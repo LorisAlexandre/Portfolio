@@ -1,0 +1,235 @@
+/* Pré settings */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding-top);
+    font-family: "Josefin Sans";
+}
+* {
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+    font-family: "Aboreto";
+}
+button {
+    background: none;
+    border: none;
+    font-size: inherit;
+}
+body {
+    position: relative;
+}
+
+/* settings couleur typo... */
+:root {
+    --main-color: ;
+    --title-typo: ;
+    --text-typo: ;
+}
+
+/* NAVBAR + RESPONSIVE NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+.material-symbols-outlined.btn-menu-on {
+    display: none;
+    font-size: 2em;
+    z-index: 9;
+}
+.navlinks {
+    position: relative;
+    transition: margin-left 1s;
+    z-index: 10;
+}
+.navlinks ul {
+    display: flex;
+    align-items: center;
+}
+.material-symbols-outlined.btn-menu-off {
+    display: none;
+    position: absolute;
+    top: 1.3em;
+    right: 1em;
+    font-size: 2em;
+}
+.navlinks ul li {
+    margin: 1em;
+}
+.navlinks ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* menu mobile */
+.menu-mobile {
+    margin-left: 0 !important;
+}
+/* dropdown */
+.menu-resto {
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    opacity: 0;
+    margin-left: -100%;
+    transition: opacity 0.5s, margin-left 0.5s;
+}
+.dropdown.dropdown-appear {
+    opacity: 1;
+    margin-left: 0;
+}
+.dropdown ul {
+    position: absolute;
+    top: 0;
+    left: -1em;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: max-content;
+    background-color: white;
+}
+/* navlinks for phone */
+@media (max-width: 1000px) {
+    .material-symbols-outlined.call {
+        display: none;
+    }
+    .material-symbols-outlined.btn-menu-on {
+        display: flex;
+    }
+    .material-symbols-outlined.btn-menu-off {
+        display: flex;
+    }
+    .navlinks ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .navlinks {
+        margin-left: -100%;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        display: grid !important;
+        place-items: center;
+    }
+    .navlinks ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .navlinks ul li {
+        font-size: 24px;
+    }
+    .navlinks ul li span {
+        font-size: 1.5em;
+    }
+}
+
+/* HEROBANNER */
+.herobanner {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: baseline;
+    justify-content: center;
+}
+.herobanner-text {
+    margin: 15em 5em 2em 5em;
+}
+.herobanner-text p {
+    margin-bottom: 1em;
+}
+.main-btn {
+    display: flex;
+    width: max-content;
+    align-items: baseline;
+    justify-content: center;
+}
+.herobanner .carte {
+    display: flex;
+    align-items: center;
+    padding: 0.75em 1em;
+    margin: 1em 1em 1em 0;
+    border: 1px solid;
+    border-radius: 10px;
+}
+.herobanner .carte .icon-carte {
+    margin-right: 10px;
+}
+.herobanner .resa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75em 1em;
+    border: 1px solid;
+    border-radius: 10px;
+}
+.herobanner .resa .icon-reservation {
+    margin-right: 10px;
+}
+@media (max-width: 550px) {
+    .herobanner .main-btn {
+        flex-direction: column;
+    }
+}
+
+/* SECTION */
+.description {
+    height: 100vh;
+}
+
+/* FOOTER */
+.footer {
+    padding: 2em;
+}
+.footer .logo {
+    display: block;
+    margin-bottom: 3em;
+}
+.footer-main-infos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-main-infos div {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.footer-main-infos .titre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-main-infos .titre span.material-symbols-outlined {
+    margin-right: 10px;
+}
+.footer-main-infos .text {
+    padding: 1em 2em;
+}
+.footer-main-infos .text i {
+    margin-right: 1em;
+}
+@media (max-width: 900px) {
+    .footer-main-infos {
+        flex-direction: column;
+    }
+} ;
