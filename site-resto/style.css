@@ -45,6 +45,9 @@ body {
     width: 100%;
     z-index: 5;
 }
+.navbar.sticky {
+    backdrop-filter: blur(8px);
+}
 .material-symbols-outlined.btn-menu-on {
     display: none;
     font-size: 2em;

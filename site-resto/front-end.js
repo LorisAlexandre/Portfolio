@@ -9,6 +9,11 @@ document.documentElement.style.setProperty(
     navHeight - 1 + "px"
 );
 
+// navbar sticky
+window.addEventListener("scroll", function () {
+    navbar.classList.toggle("sticky", window.scrollY > 0);
+});
+
 // menu-mobile
 const btnMobMenuOn = document.querySelector(".btn-menu-on");
 const btnMobMenuOff = document.querySelector(".btn-menu-off");
