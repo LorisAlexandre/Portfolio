@@ -10,6 +10,9 @@ body {
     font-size: large;
 }
 div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 4em;
     line-height: 2em;
 }
@@ -18,4 +21,12 @@ div strong {
 }
 .portfolio-list li {
     margin: 1em 0;
+}
+@media (max-width: 900px) {
+    body {
+        padding: 0;
+    }
+    div {
+        padding: 2em;
+    }
 }
