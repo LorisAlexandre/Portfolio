@@ -52,7 +52,7 @@ a:hover * {
     opacity: 0;
     transform: translateX(-100%);
     filter: blur(8px);
-    transition: all 2s;
+    transition: all 1.5s;
 }
 .show {
     opacity: 1;
@@ -130,7 +130,7 @@ a:hover * {
     flex-direction: column;
     align-items: baseline;
     width: max-content;
-    background-color: inherit;
+    background-color: white;
 }
 /* navlinks for phone */
 @media (max-width: 1000px) {
@@ -155,7 +155,7 @@ a:hover * {
         width: 100%;
         top: 0;
         left: 0;
-        background-color: inherit;
+        background-color: white;
         display: grid !important;
         place-items: center;
     }

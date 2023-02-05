@@ -45,7 +45,9 @@ menuRestoBtn.addEventListener("click", function () {
 btnMobMenuOff.addEventListener("click", function () {
     dropdown.classList.remove("dropdown-appear");
 });
-
+window.addEventListener("scroll", function () {
+    dropdown.classList.remove("dropdown-appear");
+});
 // animate on scroll
 const observer = new IntersectionObserver((entrees) => {
     entrees.forEach((entrer) => {
