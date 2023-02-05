@@ -6,12 +6,13 @@ html {
 }
 * {
     font-family: inherit;
-    color: inherit;
+    color: var(--main-color);
     text-decoration: none;
     list-style: none;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: var(--bg-color);
 }
 h1,
 h2,
@@ -23,15 +24,40 @@ button {
     border: none;
     font-size: inherit;
 }
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75em 1em;
+    border: 1px solid;
+    border-radius: 10px;
+}
 body {
     position: relative;
 }
 
 /* settings couleur typo... */
 :root {
-    --main-color: ;
-    --title-typo: ;
-    --text-typo: ;
+    /* --main-color: #f5fdc6; */
+    /* --bg-color: #0c0c0c; */
+    /* --title-typo: #ff4500; */
+    /* --hover-color: #d0b17a; */
+}
+a:hover,
+a:hover * {
+    color: var(--hover-color);
+}
+/* ANIMATION ON SCROLL */
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(8px);
+    transition: all 2s;
+}
+.show {
+    opacity: 1;
+    transform: translateX(0%);
+    filter: blur(0);
 }
 
 /* NAVBAR + RESPONSIVE NAVBAR */
@@ -47,6 +73,7 @@ body {
 }
 .navbar.sticky {
     backdrop-filter: blur(8px);
+    box-shadow: 1px -5px 10px #f5fdc6;
 }
 .material-symbols-outlined.btn-menu-on {
     display: none;
@@ -103,7 +130,7 @@ body {
     flex-direction: column;
     align-items: baseline;
     width: max-content;
-    background-color: white;
+    background-color: inherit;
 }
 /* navlinks for phone */
 @media (max-width: 1000px) {
@@ -128,7 +155,7 @@ body {
         width: 100%;
         top: 0;
         left: 0;
-        background-color: white;
+        background-color: inherit;
         display: grid !important;
         place-items: center;
     }
@@ -166,24 +193,11 @@ body {
     align-items: baseline;
     justify-content: center;
 }
-.herobanner .carte {
-    display: flex;
-    align-items: center;
-    padding: 0.75em 1em;
-    margin: 1em 1em 1em 0;
-    border: 1px solid;
-    border-radius: 10px;
+.main-btn .btn {
+    margin-right: 10px;
 }
 .herobanner .carte .icon-carte {
     margin-right: 10px;
-}
-.herobanner .resa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.75em 1em;
-    border: 1px solid;
-    border-radius: 10px;
 }
 .herobanner .resa .icon-reservation {
     margin-right: 10px;
@@ -193,16 +207,73 @@ body {
         flex-direction: column;
         margin-inline: auto;
     }
+    .main-btn .btn {
+        margin: 10px 0;
+    }
 }
 
-/* SECTION */
-.description {
-    height: 100vh;
+/* GALERIE */
+#galerie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+}
+.galerie {
+    max-width: 1200px;
+    width: 80%;
+    margin: 3em auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    gap: 10px;
+}
+.galerie li {
+    width: 300px;
+}
+.galerie img {
+    width: 100%;
+    height: initial;
+    object-fit: cover;
+    object-position: center;
+}
+.galerie li:nth-child(2) {
+    transition-delay: 200ms;
+}
+.galerie li:nth-child(3) {
+    transition-delay: 400ms;
+}
+.galerie li:nth-child(4) {
+    transition-delay: 600ms;
+}
+.galerie li:nth-child(5) {
+    transition-delay: 800ms;
+}
+.galerie li:nth-child(6) {
+    transition-delay: 1000ms;
+}
+.galerie li[data-index="5"] img {
+    margin-top: -50px;
+}
+@media (max-width: 1151px) {
+    .galerie li[data-index="5"] img {
+        margin-top: 0;
+    }
+    .galerie li[data-index="4"] img,
+    .galerie li[data-index="6"] img {
+        margin-top: -50px;
+    }
+}
+@media (max-width: 763px) {
+    .galerie li[data-index="4"] img,
+    .galerie li[data-index="6"] img {
+        margin-top: 0;
+    }
 }
 
 /* FOOTER */
 .footer {
-    padding: 2em;
+    padding: 8em 4em;
 }
 .footer .logo {
     display: block;
@@ -236,4 +307,84 @@ body {
     .footer-main-infos {
         flex-direction: column;
     }
-} ;
+}
+
+/* PAGE CARTE.HTML */
+/* CARTE */
+#la-carte {
+    margin-top: 3em;
+    padding: var(--scroll-padding-top) 4em;
+    display: flex;
+    flex-wrap: wrap;
+}
+#la-carte div:nth-child(2) {
+    transition-delay: 200ms;
+}
+#la-carte div:nth-child(3) {
+    transition-delay: 400ms;
+}
+#la-carte div:nth-child(4) {
+    transition-delay: 600ms;
+}
+#plat,
+#vin,
+#boisson,
+#dessert {
+    margin: 4em;
+    flex-grow: 1;
+}
+.plats,
+.boissons,
+.vins,
+.desserts {
+    margin: 2em 0;
+}
+.plats h3,
+.boissons h3,
+.vins h3,
+.desserts h3 {
+    padding-top: 2em;
+}
+.titre-prix {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+#la-carte .main-btn {
+    margin: auto;
+}
+@media (max-width: 500px) {
+    #plat,
+    #vin,
+    #boisson,
+    #dessert {
+        margin-inline: 0;
+    }
+}
+
+/* GALERIE.HTML */
+/* GALERIE */
+#galerie-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--scroll-padding-top);
+}
+#reso .titre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+#reso .titre span {
+    margin-right: 10px;
+}
+.reso {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 33%;
+    margin-inline: auto;
+    font-size: 2em;
+}

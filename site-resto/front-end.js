@@ -45,3 +45,18 @@ menuRestoBtn.addEventListener("click", function () {
 btnMobMenuOff.addEventListener("click", function () {
     dropdown.classList.remove("dropdown-appear");
 });
+
+// animate on scroll
+const observer = new IntersectionObserver((entrees) => {
+    entrees.forEach((entrer) => {
+        if (entrer.isIntersecting) {
+            entrer.target.classList.add("show");
+        } else {
+            entrer.target.classList.remove("show");
+        }
+    });
+});
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => {
+    observer.observe(el);
+});
