@@ -116,8 +116,8 @@ a:hover * {
 .dropdown {
     position: relative;
     opacity: 0;
-    margin-left: -100%;
-    transition: opacity 0.5s, margin-left 0.5s;
+    margin-left: -300%;
+    transition: opacity 1s ease-in-out, margin-left 1s ease-in-out;
 }
 .dropdown.dropdown-appear {
     opacity: 1;
