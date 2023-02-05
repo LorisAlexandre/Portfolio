@@ -72,7 +72,8 @@ a:hover * {
     z-index: 5;
 }
 .navbar.sticky {
-    backdrop-filter: blur(8px);
+    /* backdrop-filter: blur(8px); */
+    background-color: white;
     box-shadow: 1px -5px 10px #f5fdc6;
 }
 .material-symbols-outlined.btn-menu-on {
