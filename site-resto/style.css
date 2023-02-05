@@ -37,12 +37,12 @@ body {
 }
 
 /* settings couleur typo... */
-:root {
-    /* --main-color: #f5fdc6; */
-    /* --bg-color: #0c0c0c; */
-    /* --title-typo: #ff4500; */
-    /* --hover-color: #d0b17a; */
-}
+/* :root {
+    --main-color: #f5fdc6;
+    --bg-color: #0c0c0c;
+    --title-typo: #ff4500;
+    --hover-color: #d0b17a;
+} */
 a:hover,
 a:hover * {
     color: var(--hover-color);
