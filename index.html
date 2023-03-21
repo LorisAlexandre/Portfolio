@@ -5,58 +5,129 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link
+            href="https://api.fontshare.com/v2/css?f[]=clash-display@1&f[]=satoshi@1,2&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
         <link rel="stylesheet" href="main.css" />
+        <script src="app-index.js" defer></script>
     </head>
     <body>
-        <h1>Mon portfolio</h1>
-        <div>
-            Bonjour, je m'appelle Loris ALEXANDRE je suis
-            <strong>développeur Web</strong> (je fais des sites internet), si
-            vous êtes sur ce site c'est que je vous ai sûrement montré
-            <strong>mon portfolio</strong>, c'est l'ensemble du travail que j'ai
-            réalise. <br />
-            Si ce travail vous plaît n'hésitez pas à me joindre afin d'avoir
-            plus d'infos sur ce que je fais. <br />
-            Dans le cas où vous n'auriez plus mes coordonées les voici.
-            <ul>
-                <li>
-                    <strong>téléphone :</strong>
-                    <a href="tel:+33769395249">07 69 39 52 49</a>
-                </li>
-                <li>
-                    <strong>mail :</strong>
-                    <a href="mailto:lorisalexandre.dev@gmail.com"
-                        >lorisalexandre.dev@gmail.com</a
-                    >
-                </li>
-            </ul>
+        <div class="preloader">
+            <h1 class="">Développeur Web</h1>
+            <h3 class="">Loris Alexandre</h3>
         </div>
-        <h2>Voici les sites que j'ai réalisé</h2>
-        <ul class="portfolio-list">
-            <li>
-                <a href="site-guilhem/index.html"
-                    >Site portfolio d'un photographe</a
-                >
-            </li>
-            <li>
-                <a href="site-resto/index.html"
-                    >Site exemple pour restaurant à personnaliser</a
-                >
-            </li>
-            <li>
-                <a href="https://www.assyacopy.fr/"
-                    >Site professionnel d'une copywriter</a
-                >
-            </li>
-            <li>
-                <a
-                    href="https://lorisalexandre.github.io/app-react-weather/"
-                    target="_blank"
-                >
-                    Site pour connaître la météo des plages de
-                    Nouvelle-Aquitaine
-                </a>
-            </li>
-        </ul>
+
+        <nav id="navbar">
+            <a href="#" class="logo">
+                <h2>Loris Alexandre</h2>
+            </a>
+            <div class="nav-links">
+                <ul class="list-items">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="herobanner">
+            <h2 class="">Développeur Web</h2>
+            <h3 class="">Loris Alexandre</h3>
+            <ul class="list-items">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#about" class="next">
+                <span class="material-symbols-outlined">
+                    keyboard_double_arrow_down
+                </span>
+            </a>
+        </div>
+
+        <div class="content">
+            <section id="about">
+                <div class="paragraphes">
+                    <h3>About</h3>
+                    <p>
+                        Salut je suis Loris, dév Front-End ( c'est coder
+                        l'interface utilisateur d'un site internet ). <br />
+                        Coder des sites vitrines, ajouter des animations et des
+                        transitions voilà ce que je fais en général. <br />
+                        Sinon je sors faire du sport ou je lis BD et mangas.
+                        <br />
+                        Je traite surtout les langages : HTML CSS JS React.JS.
+                        <br />
+                        Mais je n'ai aucun soucis à prendre un projet avec un
+                        autre langage ( ça rajoutera une corde à mon arc ).
+                    </p>
+                </div>
+                <div class="img"></div>
+            </section>
+
+            <section id="projets">
+                <h3>Projets</h3>
+                <ul class="list-items-projets">
+                    <li>
+                        <a href="https://www.assyacopy.fr/" target="_blank"
+                            >Site d'une copywritter freelance</a
+                        >
+                        <p class="description">HTML / CSS</p>
+                    </li>
+                    <li>
+                        <a
+                            href="https://lorisalexandre.github.io/app-react-weather/"
+                            target="_blank"
+                            >Site donnant la météo des plages de
+                            Nouvelle-Aquitaine
+                        </a>
+                        <p class="description">React.JS et APIs</p>
+                    </li>
+                    <li>
+                        <a
+                            href="https://lorisalexandre.github.io/Portfolio/site-guilhem/index.html"
+                            target="_blank"
+                            >Portfolio d'un photographe</a
+                        >
+                        <p class="description">HTML/CSS et Js</p>
+                    </li>
+                    <li>
+                        <a
+                            href="https://lorisalexandre.github.io/Portfolio/site-resto/index.html"
+                            target="_blank"
+                            >Site d'un restaurant à personnaliser</a
+                        >
+                        <p class="description">HTML/CSS et Js</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="contact">
+                <h3>Contact</h3>
+                <div class="contact-content">
+                    <p>
+                        Merci d'avoir pris le temps de regarder cette page qui
+                        me présente et mon travail pour toutes questions /
+                        commentaires n'hésitez pas à me contacter :)
+                    </p>
+                    <ul class="list-items-contact">
+                        <li>
+                            Tél :
+                            <a href="tel:+33 7 69 39 52 49">07 69 39 52 49</a>
+                        </li>
+                        <li>
+                            Mail :
+                            <a href="mailto:lorisalexandre.dev@gmail.com"
+                                >lorisalexandre.dev@gmail.com</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </body>
 </html>

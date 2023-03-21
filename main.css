@@ -1,32 +1,216 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding-top);
+    background-color: #e5d7d7;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
 * {
-    font-family: monospace;
-    color: black;
+    color: inherit;
+    text-decoration: none;
+    font-family: "Satoshi";
+    font-weight: 475;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-a:hover {
-    color: red;
+h1,
+h2 {
+    font-family: "Clash Display";
+    font-weight: 800;
 }
-body {
-    padding: 2em;
-    font-size: large;
+
+.scrollbar {
+    margin: 2px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100px;
+    background-color: black;
+    border-radius: 10px;
 }
-div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 4em;
-    line-height: 2em;
+.clickScrollbar {
+    margin: 2px;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background-color: rgba(170, 170, 170, 0.356);
 }
-div strong {
-    text-transform: uppercase;
+
+.preloader {
+    position: absolute;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #e5d7d7;
+    z-index: 10;
 }
-.portfolio-list li {
-    margin: 1em 0;
+.preloader h3 {
+    text-align: center;
 }
-@media (max-width: 900px) {
-    body {
-        padding: 0;
+.preloader h1 {
+    font-variation-settings: "wght" 500;
+    font-style: italic;
+
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-name: change;
+    transition-timing-function: ease-in-out;
+}
+@keyframes change {
+    0% {
+        font-variation-settings: "wght" 500;
     }
-    div {
-        padding: 2em;
+
+    50% {
+        font-variation-settings: "wght" 900;
+    }
+
+    100% {
+        font-variation-settings: "wght" 500;
+    }
+}
+.fondu-out {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 2s;
+    transition-delay: 2s;
+}
+
+.herobanner {
+    height: var(--section-height);
+    width: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    position: relative;
+}
+.herobanner .list-items {
+    margin-top: 5em;
+}
+.herobanner .next {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    width: fit-content;
+    padding: 1.25rem 0.5rem;
+    border: 2px solid;
+    border-radius: 1.25rem;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#navbar * {
+    font-family: "Clash Display";
+}
+
+.list-items {
+    display: flex;
+}
+.list-items li {
+    margin-inline: 1rem;
+}
+#navbar.sticky {
+    position: sticky;
+    inset: 0;
+    opacity: 1;
+}
+
+.content section {
+    width: 100%;
+    height: 100vh;
+    padding: 4rem;
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.content h3 {
+    font-family: "Clash Display";
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.paragraphes {
+    flex-basis: 53%;
+}
+.paragraphes p {
+    font-size: 1.3rem;
+    padding: 2em;
+    font-weight: 550;
+    line-height: 2rem;
+}
+.img {
+    background-image: url("/media-index/IMG_9599.jpg");
+    flex-basis: 29%;
+    height: 400px;
+    background-position: center 10;
+    background-size: cover;
+}
+
+.list-items-projets {
+    height: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+.list-items-projets li {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    transition: color 1s;
+}
+.list-items-projets li p {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.list-items-projets li:hover {
+    color: #463f3a;
+}
+.list-items-projets li:hover p {
+    opacity: 1;
+}
+
+.contact-content {
+    display: grid;
+    place-content: center;
+    height: 100%;
+}
+.contact-content p {
+    padding: 3rem;
+}
+.list-items-contact {
+    line-height: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    #about {
+        flex-direction: column;
+    }
+    .img {
+        display: none;
     }
 }
