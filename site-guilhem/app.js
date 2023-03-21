@@ -1,3 +1,17 @@
+const preloader = document.querySelector(".preloader");
+
+window.addEventListener("load", () => {
+    preloader.classList.add("fondu-out");
+});
+
+const text = document.querySelector(".logo h1");
+text.innerHTML = text.innerText
+    .split("")
+    .map(
+        (char, i) => `<span style="animation-delay:${i * 200}ms">${char}</span>`
+    )
+    .join("");
+
 let articles = document.getElementsByClassName("article");
 let activeIndex = 0;
 
