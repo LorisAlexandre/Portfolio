@@ -2,9 +2,6 @@ const preloader = document.querySelector(".preloader");
 
 window.addEventListener("load", () => {
     preloader.classList.add("fondu-out");
-    setTimeout(() => {
-        preloader.classList.add("disappear");
-    }, 4000);
 });
 
 const navbar = document.querySelector("#navbar");
