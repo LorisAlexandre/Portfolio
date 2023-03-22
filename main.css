@@ -98,10 +98,9 @@ h2 {
     transition: opacity 1s;
     z-index: 10;
 }
-#navbar * {
+#navbar .nav-links li a {
     font-family: "Clash Display";
 }
-
 .list-items {
     display: flex;
 }
@@ -112,6 +111,27 @@ h2 {
     position: sticky;
     inset: 0;
     opacity: 1;
+}
+.nav-links {
+    position: relative;
+    transition: all 1s ease-in-out;
+    z-index: 15;
+}
+.menu-mobile {
+    margin-left: 0 !important;
+    opacity: 1 !important;
+}
+.material-symbols-outlined.btn-menu-on {
+    display: none;
+    font-size: 2rem;
+    z-index: 0;
+}
+.material-symbols-outlined.btn-menu-off {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
 }
 
 .content section {
@@ -195,8 +215,31 @@ h2 {
     #about {
         flex-direction: column;
     }
-    .img {
+    #about .img {
         display: none;
+    }
+    #about .paragraphes {
+        flex-basis: auto;
+    }
+    .nav-links {
+        margin-left: -100%;
+        opacity: 0;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #e5d7d7;
+        display: grid;
+        place-items: center;
+    }
+    .material-symbols-outlined.btn-menu-on {
+        display: flex;
+    }
+    .material-symbols-outlined.btn-menu-off {
+        display: flex;
+        z-index: 15;
+        background-color: #e5d7d7;
     }
 }
 @media (max-width: 700px) {
@@ -209,9 +252,6 @@ h2 {
         padding-top: 3rem;
     }
 
-    #about .paragraphes {
-        flex-basis: auto;
-    }
     #about .paragraphes p {
         padding: 1rem;
         line-height: normal;

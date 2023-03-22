@@ -19,3 +19,18 @@ document.documentElement.style.setProperty(
     "--section-height",
     `calc(100vh - ${navHeight}px)`
 );
+
+// menu-mobile
+const btnMobMenuOn = document.querySelector(".btn-menu-on");
+const btnMobMenuOff = document.querySelector(".btn-menu-off");
+const navlinks = document.querySelector(".nav-links");
+
+btnMobMenuOn.addEventListener("click", function () {
+    navlinks.classList.add("menu-mobile");
+});
+btnMobMenuOff.addEventListener("click", function () {
+    navlinks.classList.remove("menu-mobile");
+});
+window.addEventListener("scroll", function () {
+    navlinks.classList.remove("menu-mobile");
+});
