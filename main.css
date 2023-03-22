@@ -121,6 +121,7 @@ h2 {
     position: relative;
     font-size: 1.3rem;
     font-weight: 700;
+    place-content: center;
 }
 .content h3 {
     font-family: "Clash Display";
@@ -128,21 +129,20 @@ h2 {
     font-weight: 700;
 }
 
-#about {
+.content-about {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .paragraphes {
     flex-basis: 53%;
 }
 .paragraphes p {
     font-size: 1.3rem;
-    padding: 2em;
+    padding: 2rem;
     font-weight: 550;
     line-height: 2rem;
 }
-.img {
+.content-about .img {
     background-image: url("./media-index/IMG_9599.jpg");
     flex-basis: 29%;
     height: 400px;
@@ -150,8 +150,13 @@ h2 {
     background-size: cover;
 }
 
+.content #projets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .list-items-projets {
-    height: 100%;
+    height: auto;
     display: grid;
     place-content: center;
     text-align: center;
@@ -192,5 +197,32 @@ h2 {
     }
     .img {
         display: none;
+    }
+}
+@media (max-width: 700px) {
+    .content section {
+        padding: 2rem;
+        font-size: 1rem;
+    }
+    .content section h3 {
+        font-size: 1.4rem;
+        padding-top: 3rem;
+    }
+
+    #about .paragraphes {
+        flex-basis: auto;
+    }
+    #about .paragraphes p {
+        padding: 1rem;
+        line-height: normal;
+    }
+    .list-items-projets li {
+        margin: 0.5rem 0;
+    }
+}
+@media (max-width: 350px) {
+    .content section {
+        font-size: 1rem;
+        padding: 0.5rem;
     }
 }
