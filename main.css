@@ -1,7 +1,6 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--scroll-padding-top);
-    background-color: #e5d7d7;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -30,7 +29,7 @@ h2 {
     transform: translateX(-0%);
     width: 100%;
     height: 100vh;
-    background-color: #e5d7d7;
+    background-color: #fff;
     z-index: 10;
 }
 .preloader h3 {
@@ -93,7 +92,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem;
     opacity: 0;
     transition: opacity 1s;
     z-index: 10;
@@ -121,6 +120,9 @@ h2 {
     margin-left: 0 !important;
     opacity: 1 !important;
 }
+.material-symbols-outlined {
+    cursor: pointer;
+}
 .material-symbols-outlined.btn-menu-on {
     display: none;
     font-size: 2rem;
@@ -135,20 +137,17 @@ h2 {
 }
 
 .content section {
-    width: 100%;
     height: 100vh;
     padding: 4rem;
-    position: relative;
-    font-size: 1.3rem;
-    font-weight: 700;
-    place-content: center;
 }
-.content h3 {
+section h3 {
     font-family: "Clash Display";
-    font-size: 1.6rem;
-    font-weight: 700;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.7rem;
+    padding-top: 4rem;
+    margin-bottom: 4rem;
 }
-
 .content-about {
     display: flex;
     justify-content: space-between;
@@ -170,11 +169,6 @@ h2 {
     background-size: cover;
 }
 
-.content #projets {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 .list-items-projets {
     height: auto;
     display: grid;
@@ -198,17 +192,23 @@ h2 {
     opacity: 1;
 }
 
-.contact-content {
-    display: grid;
-    place-content: center;
-    height: 100%;
+section#contact {
+    position: relative;
 }
-.contact-content p {
-    padding: 3rem;
+.contact-content {
+    padding: 2rem;
+    text-align: center;
 }
 .list-items-contact {
-    line-height: 2rem;
     margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+section#contact .list-items {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media (max-width: 900px) {
@@ -229,7 +229,7 @@ h2 {
         width: 100%;
         top: 0;
         left: 0;
-        background-color: #e5d7d7;
+        background-color: #fff;
         display: grid;
         place-items: center;
     }
@@ -239,7 +239,6 @@ h2 {
     .material-symbols-outlined.btn-menu-off {
         display: flex;
         z-index: 15;
-        background-color: #e5d7d7;
     }
 }
 @media (max-width: 700px) {
