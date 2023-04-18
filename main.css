@@ -248,7 +248,7 @@ section#contact .list-items {
     }
     .content section h3 {
         font-size: 1.4rem;
-        padding-top: 3rem;
+        margin-bottom: 1rem;
     }
 
     #about .paragraphes p {
@@ -257,6 +257,9 @@ section#contact .list-items {
     }
     .list-items-projets li {
         margin: 0.5rem 0;
+    }
+    .list-items-contact {
+        flex-direction: column;
     }
 }
 @media (max-width: 350px) {
